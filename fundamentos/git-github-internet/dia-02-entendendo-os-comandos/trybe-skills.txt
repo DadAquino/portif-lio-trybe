@@ -1,6 +1,8 @@
 - Unix
 - Bash
 - Git
+- Javascritpt
 - HTML
 - CSS
 - Soft skills
+
