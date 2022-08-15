@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+}
+div:hover{
+    border-style: solid ;
+}
+#d1 {
+    background-color: #a52b2b;
+}
+#d2 {
+    background-color: #0d3b66;
+}
+#d3 {
+    background-color: #c1ae7c;
+    height: 30px;
+    
+}
+#d4 {
+    background-color: #000000;
+    color: white;
+}
+#d5 {
+    background-color: #1B9AAA;}
+h3{
+    text-align: center;
+    font-size: 15px;
+    font-family: monospace;
+}
+#h1, #h3, #h5{
+    font-style: italic;
+}
+
