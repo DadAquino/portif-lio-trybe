@@ -1,0 +1,59 @@
+body{
+    text-align: center;
+    background-color: #9EC5AB;
+}
+nav{
+    text-align: left;
+    background-color:#2093C4;
+    color: #ECB07B;
+    padding: 15px;
+}
+h1{
+    text-align: center;
+}
+section.sec{
+    border: 2px solid #073764;
+    text-align: center;
+    background-color: #2093C4;
+    margin-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+}
+snap{
+    font-weight: bold;
+}
+snap.destaq{
+    font-style: italic;
+}
+section#tabula table{
+    display: inline-block;
+    background-color:#ECB07B;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+}
+section a{
+    display: inline-block;
+    background-color:#ECB07B;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+}
+section a:hover{
+    background-color: antiquewhite;
+    padding: 7px;
+    color: #073764;
+}
+footer{
+    background-color: rgba(255, 247, 247, 0.603);
+    padding: 30px ;
+    margin-bottom: 0;
+    margin-top :200px ;
+    font-family: monospace;
+    font-size:medium;
+}
+aside{
+    margin-top: 110px;
+    display: inline-block;
+}
