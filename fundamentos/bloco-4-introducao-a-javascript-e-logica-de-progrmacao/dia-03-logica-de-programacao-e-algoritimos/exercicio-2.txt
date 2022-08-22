@@ -1,0 +1,7 @@
+- declarar array que vai receber a palavra.
+- atribuir palavra a variável;
+- criar laço for com variavel idice igual a zero
+- a variavel deve rodar até a ultima letra da palavra, usar variavel.lenght, a cada loop o indice sera incrementado;
+crria
+- dentro do laço, criar uma variável que receberá o a letra para a troca, no sistema de 3;
+- 
