@@ -1,13 +1,8 @@
-let nome = 'tryber';
-
-for(let i=0;i<nome.length-1;i+=1){
-    let j=i+1;
-    let n = nome[i];
-    console.log(n);
-    nome[i]= nome[j];
-    console.log(nome);
-    nome[j]= n;
-    console.log(nome[i], nome[j]);
+let nome = 'SATOR AREPO TENET OPERA ROTAS';
+let n='';
+for(let i=nome.length-1;i>=0;i-=1){
+    n+=nome[i];
 }
-console.log(nome);
+
+console.log(n);
 
