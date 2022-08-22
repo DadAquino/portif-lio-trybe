@@ -1,0 +1,5 @@
+- declarar dua variaveis: menor e maior
+- atribuir valores as variaveis
+- loop for que roda até a ultima palavra do array
+- if dentro do loop, comparando o tamannho da palavar com a varável e atribuindo casdo true;
+-imprime as variaveis no console.

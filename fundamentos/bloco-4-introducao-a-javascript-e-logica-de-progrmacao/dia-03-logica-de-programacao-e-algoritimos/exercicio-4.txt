@@ -1,0 +1,6 @@
+- delcara as variaveis n e a numero (que será o numero que será usado como base)
+-cria laço for que percorre de 2 até o numero o numero selecionado
+- dentro do laço for criar outro laço que percorre de 1 até p indice do primeiro laço, fazendo divisões para saber por quais numeroso o numero do indice é divisivel
+- condição if para que toda vez que o numero for divisivel haver um refistro, nesse caso uma variavel sendo incrementada.
+- final se o numero do contador for 2 o numero sera atribuido a variavel n.
+- não a necessidade de se comparar o maior numero, porque devido a estrutura do codigo o ultimo numero refistrado já será o ultimo

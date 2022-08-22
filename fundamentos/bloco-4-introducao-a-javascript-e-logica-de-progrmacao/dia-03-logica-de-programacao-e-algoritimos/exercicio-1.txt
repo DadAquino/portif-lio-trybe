@@ -1,0 +1,4 @@
+- Criar uma variável n com valor 10.
+- criar um loop for, com um variavel com valor i = 1, que vai rodar até o número 10, com incremento de 1 a cada loop.
+- dentro do loop, fazer a operação de multiplicaçao da variável n com a variável i do loop.
+- fora do loop, usar o console log para mostrar o valor final da variável.
