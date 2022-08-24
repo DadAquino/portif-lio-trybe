@@ -12,8 +12,8 @@ function repetente(numbers){
                 contador1+=1;}}
 
         if(contador1>contador){
+            contador=contador1;
             n=alvo[i];
-            console.log(n);
         }
     }
     return n;
@@ -23,5 +23,5 @@ function repetente(numbers){
 
 
 
-let numeros = [2, 3, 2, 5, 8, 2, 3];
+let numeros = [2, 3, 2, 5, 8, 2, 3, 5, 5 , 3 , 7 , 3];
 console.log(repetente(numeros));
