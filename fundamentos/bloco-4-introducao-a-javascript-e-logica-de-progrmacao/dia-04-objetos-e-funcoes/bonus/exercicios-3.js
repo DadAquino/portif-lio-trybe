@@ -1,7 +1,7 @@
 function listaDeFrutas (fruit){
   // declaracao de variaveis para usar no loop  
     
-    let lista = [];
+    let lista = ['frutas'];
     let frutas = [];
 
 
@@ -10,18 +10,32 @@ function listaDeFrutas (fruit){
     for(let key in fruit){
         frutas[key]=fruit[key];
     }
+   
 
 // loop para correr o array e adicionar palavras novas ao novo array
 
     for (let i=0;i<frutas.length;i+=1){
+        let contador=0;
 
-        for(let j=0;j<=lista.length;j+=1){
+        for(let key in lista){
+            if(lista[key]===frutas[i]){
+                contador+=1;}}
+    if(contador==0){
+    lista.push(frutas[i]);  }}
 
-            if(frutas[i]!==lista[j]){
+//array para armazenar os numeros;
 
-                lista.push(frutas[i]);  }}}
-    
-    console.log(lista);
+// loop para contar quantas vezes a palavra aparece
+        for(let i=0;i<lista.length;i+=1){
+            let contador = 0;
+            for(let j=0;j<frutas.length;j+=1){
+                if(lista[i]==frutas[j]){
+                    contador+=1; }}
+        lista[i]=[lista[i], contador];
+        }
+// retorno
+
+        return 'Sua cesta possui: '+lista[1][2];
 }
 
 
@@ -56,4 +70,4 @@ const basket = [
     'Banana', 'Pera', 'Abacate', 'Uva',
   ];
 
-  listaDeFrutas(basket);
+  console.log(listaDeFrutas(basket));
