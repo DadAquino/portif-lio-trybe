@@ -57,13 +57,83 @@
   </head>
   <body>
     <script>
+        // Exercicio 1
+        // tag body capturada
         const titulo = document.querySelector('body');
+        
+        // criando um novo elemento
         const newelement = document.createElement('h1');
+        // exercicio 2.1
+        newelement.className = 'title';
+        
+        //atribuindo o texto que será usado
         let text = 'Exercício 5.2 - JavaScript DOM';
         newelement.innerText = text;
+        // colocando o novo elemento como filho
         titulo.appendChild(newelement);
 
+        // exercicio 2
+        const main = document.createElement('main');
+        main.className = 'main-content';
+        titulo.appendChild(main);
+        
+
+        // exercicio 3
+        const section = document.createElement('section');
+        section.className = 'center-content';
+        main.appendChild(section);
       
+        // exercicio 4
+        const p = document.createElement('p');
+        p.innerText = 'algun texto massa aqui';
+        section.appendChild(p);
+
+        // exercicio 5
+        const sectionleft = document.createElement('section');
+        sectionleft.className = 'left-content';
+        main.appendChild(sectionleft);
+
+        // exercicio 6
+        const sectionright = document.createElement('section');
+        sectionright.className = 'right-content';
+        main.appendChild(sectionright);
+
+        // exercicio 7 
+        const img = document.createElement('img');
+        img.className = 'small-image';
+        img.src = 'https://picsum.photos/200';
+        sectionleft.appendChild(img);
+
+        // exercicio 8
+        const list = document.createElement('ul');
+        for (let i=0;i<8;i+=1){
+            let element = document.createElement('li');
+            element.innerText = i+1;
+            list.appendChild(element);
+        }
+        sectionright.appendChild(list);
+ 
+
+        // exercicio 8 
+        for(let i=0; i<3;i+=1){
+            const h3 = document.createElement('h3');
+            main.appendChild(h3);
+            // exercicio 2.2
+            h3.className = 'description';
+        }
+
+        // parte 2 
+        // exercicio 1
+        // exercicio 3
+        main.removeChild(sectionleft);
+        // exercicio 4
+        sectionright.style.marginRight = 'auto';
+        // exericio 5
+        section.parentElement.style.backgroundColor = 'green';
+        // exercicio 6
+
+        
+
     </script>
   </body>
 </html>
