@@ -71,6 +71,36 @@ function textChange(){
             a.style.color = 'green';}
 }
 
+// exercicio 6
+
+let d = document.getElementsByClassName('day');
+for(let i = 0 ; i<d.length ; i +=1 ){
+    d[i].addEventListener('mouseover', entrou);
+    d[i].addEventListener('mouseout' , saiu);
+}
+
+
+function entrou (event) {
+
+    let elemento = event.target;
+    elemento.style.color = 'blue';
+
+}
+function saiu (event) {
+
+    let elemento = event.target;
+    elemento.style.color = 'grey';
+
+
+}
+
+// exercicio 7 
+let tarefa = document.createElement('button');
+botaosexta.id = 'btn-friday';
+botaosexta.innerText = 'Sexta-Feira';
+local.appendChild(botaosexta);
+
+
 
 
 
