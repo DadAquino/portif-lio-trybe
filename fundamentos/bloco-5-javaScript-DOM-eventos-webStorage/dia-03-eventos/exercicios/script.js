@@ -49,8 +49,8 @@ function colorChange(){
 
         for(let i=0; i<dia.length; i+=1){
             let a = document.getElementsByClassName('holiday')[i];
-            a.style.color = 'green';}
-}
+            a.style.backgroundColor = 'white';
+}}
 
 // exercicio 4
 
@@ -68,8 +68,10 @@ function textChange(){
         let dia = document.getElementsByClassName('friday');
         for(let i=0; i<dia.length; i+=1){
             let a = document.getElementsByClassName('friday')[i];
-            a.style.color = 'green';}
-}
+            a.innerText = "Sextooou!";
+            a.style.fontWeight = 'bold';
+            
+}}
 
 // exercicio 6
 
@@ -83,22 +85,70 @@ for(let i = 0 ; i<d.length ; i +=1 ){
 function entrou (event) {
 
     let elemento = event.target;
-    elemento.style.color = 'blue';
+    elemento.style.fontSize = '1.5em';
 
 }
 function saiu (event) {
 
     let elemento = event.target;
-    elemento.style.color = 'grey';
+    elemento.style.fontSize = '1em';
 
 
 }
 
 // exercicio 7 
-let tarefa = document.createElement('button');
-botaosexta.id = 'btn-friday';
-botaosexta.innerText = 'Sexta-Feira';
-local.appendChild(botaosexta);
+
+// recuperando a div
+let localDaDiv =  document.getElementsByClassName('my-tasks')[0];
+
+// adicionando botão e area de tarefas
+let areaDeTexto = document.createElement('input');
+areaDeTexto.type = 'text';
+areaDeTexto.id = 'taks';
+areaDeTexto.name = 'usertask';
+areaDeTexto.placeholder = 'Escreva sua tarefa'
+
+// adicionando botao
+let submit = document.createElement('button');
+submit.innerText = 'Enviar';
+submit.id = 'btn-add';
+let tasks = document.createElement('span');
+
+// atribuindo a filiação
+
+localDaDiv.appendChild(tasks);
+localDaDiv.appendChild(areaDeTexto);
+localDaDiv.appendChild(submit);
+
+// adicionando evento de click
+submit.addEventListener('click' , addtask);
+
+//estilizando
+tasks.style.backgroundColor = 'white';
+tasks.style.fontWeight = 'bold';
+
+
+function addtask(){
+   
+ 
+
+}
+
+// exercicio 8 
+
+// exercicio 9
+
+let task = document.getElementsByClassName('span')[0];
+task.addEventListener('click' , seleciado);
+
+function seleciado(evento){
+    let a = evento.target;
+    a.className = 'task-selected';
+}
+
+
+
+ 
 
 
 
