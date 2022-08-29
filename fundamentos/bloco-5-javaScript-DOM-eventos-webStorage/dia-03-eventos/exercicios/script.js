@@ -43,10 +43,34 @@ local.appendChild(botao);
 
 // exercicio 3
 botao.addEventListener('click' , colorChange);
-
 function colorChange(){
-    let dias = document.getElementsByClassName('holiday');
-    console.log(dias);
-    dias[i].style.backgroundcolor = 'black';
+
+        let dia = document.getElementsByClassName('holiday');
+
+        for(let i=0; i<dia.length; i+=1){
+            let a = document.getElementsByClassName('holiday')[i];
+            a.style.color = 'green';}
 }
+
+// exercicio 4
+
+let botaosexta = document.createElement('button');
+botaosexta.id = 'btn-friday';
+botaosexta.innerText = 'Sexta-Feira';
+local.appendChild(botaosexta);
+
+
+// exercicio 5
+
+botaosexta.addEventListener('click' , textChange);
+function textChange(){
+
+        let dia = document.getElementsByClassName('friday');
+        for(let i=0; i<dia.length; i+=1){
+            let a = document.getElementsByClassName('friday')[i];
+            a.style.color = 'green';}
+}
+
+
+
 
