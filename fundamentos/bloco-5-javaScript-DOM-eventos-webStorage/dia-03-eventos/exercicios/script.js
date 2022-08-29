@@ -21,6 +21,32 @@ let dias = document.querySelector('#days');
 for (let i = 0; i<decemberDaysList.length; i+=1 ){
     let n = document.createElement('li');
     n.className = 'day';
+    if(decemberDaysList[i]==24 || decemberDaysList[i]==25 || decemberDaysList[i]==31 ){
+        n.className = 'day holiday';
+    }
+    if(decemberDaysList[i]==4 || decemberDaysList[i]==11 || decemberDaysList[i]==18 || decemberDaysList[i]==25){
+        n.className = 'day friday';
+    }
     n.innerText = decemberDaysList[i];
+   
     dias.appendChild(n);
+
 }
+
+// exercicio 2
+
+let local = document.getElementsByClassName('buttons-container')[0];
+let botao = document.createElement('button');
+botao.id = 'btn-holiday';
+botao.innerText = 'Feriados';
+local.appendChild(botao);
+
+// exercicio 3
+botao.addEventListener('click' , colorChange);
+
+function colorChange(){
+    let dias = document.getElementsByClassName('holiday');
+    console.log(dias);
+    dias[i].style.backgroundcolor = 'black';
+}
+
