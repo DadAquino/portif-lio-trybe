@@ -3,6 +3,7 @@ const texto = document.getElementById('texto');
 texto.style.backgroundColor = localStorage.getItem('corDeFundo');
 texto.style.color = localStorage.getItem('corDoTexto');
 texto.style.fontSize = localStorage.getItem('tamanhoDoTexto');
+texto.style.letterSpacing = localStorage.getItem('espacamento');
 
 // mudando a cor de fundo do texto
 const cores = document.getElementById("cores").children;
@@ -39,4 +40,31 @@ function fonte(evento){
     console.log(tamanho);
     texto.style.fontSize = tamanho;
     localStorage.setItem('tamanhoDoTexto' , tamanho);
+}
+
+// Espacamento entre as linhas
+const espacamento = document.getElementById("linha").children;
+
+for (let i=0;i<espacamento.length ; i+=1){
+    espacamento[i].addEventListener('click', linha);
+}
+function linha(evento){
+    let linha = evento.target.innerText;
+    console.log(linha);
+    texto.style.letterSpacing = linha;
+    localStorage.setItem('espacamento' , linha);
+}
+
+// tipo da fonte
+
+const fontFamily = document.getElementById("tipoFonte").children;
+
+for (let i=0;i<fontFamily.length ; i+=1){
+    fontFamily[i].addEventListener('click', tFonte);
+}
+function tFonte(evento){
+    let tipo = evento.target.innerText;
+    console.log(tipo);
+    texto.style.fontFamily = tipo;
+    localStorage.setItem('tipoFonte' , tipo);
 }
