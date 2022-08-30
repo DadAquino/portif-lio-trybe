@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    background-color: white;
+
+}
+    
+h1{
+    background-color: #c1ae7c;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: monospace;
+}
+h2{
+    margin-top: 50px;
+}
+.opcoes-de-mudanca {
+
+    background-color: #c1ae7c;
+    display: inline-block;
+    border: 1px solid white;
+    width: 350px;
+    padding: 15px;
+}
+
+#opcoes-de-mudanca button{
+    display: flexbox;
+}
