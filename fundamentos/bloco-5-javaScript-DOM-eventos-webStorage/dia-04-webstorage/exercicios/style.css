@@ -22,8 +22,18 @@ h2{
     border: 1px solid white;
     width: 350px;
     padding: 15px;
+    border: 1px solid black;
 }
 
 #opcoes-de-mudanca button{
     display: flexbox;
+}
+#reset{
+padding-top: 36px;
+
+
+}
+
+#tipo-de-fonte{
+    padding-top: 36px;
 }

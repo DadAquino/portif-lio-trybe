@@ -3,7 +3,7 @@ const texto = document.getElementById('texto');
 texto.style.backgroundColor = localStorage.getItem('corDeFundo');
 texto.style.color = localStorage.getItem('corDoTexto');
 texto.style.fontSize = localStorage.getItem('tamanhoDoTexto');
-texto.style.letterSpacing = localStorage.getItem('espacamento');
+texto.style.lineHeight = localStorage.getItem('espacamento');
 
 // mudando a cor de fundo do texto
 const cores = document.getElementById("cores").children;
@@ -37,7 +37,6 @@ for (let i=0;i<tamanhoDaFonte.length ; i+=1){
 }
 function fonte(evento){
     let tamanho = evento.target.innerText;
-    console.log(tamanho);
     texto.style.fontSize = tamanho;
     localStorage.setItem('tamanhoDoTexto' , tamanho);
 }
@@ -50,8 +49,7 @@ for (let i=0;i<espacamento.length ; i+=1){
 }
 function linha(evento){
     let linha = evento.target.innerText;
-    console.log(linha);
-    texto.style.letterSpacing = linha;
+    texto.style.lineHeight = linha;
     localStorage.setItem('espacamento' , linha);
 }
 
@@ -64,7 +62,15 @@ for (let i=0;i<fontFamily.length ; i+=1){
 }
 function tFonte(evento){
     let tipo = evento.target.innerText;
-    console.log(tipo);
     texto.style.fontFamily = tipo;
     localStorage.setItem('tipoFonte' , tipo);
+}
+
+// botao pra resetar texto
+const botao = document.getElementById("botao");
+botao.addEventListener("click" , reset);
+
+function reset(event){
+localStorage.clear();
+location.reload();
 }
