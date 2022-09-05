@@ -1,0 +1,86 @@
+Cookies são usados para armazenar dados no própio computador, dados que serão utilizados pelo servidor quando a requisição for enviada junto com os cookies.
+
+Podemos manipular os cookies pelo Js usando a função document.cookie que tem formato chave-valor.
+
+Ex: document.cookie = 'email=isabella@email.com';
+
+
+O cookie é deletado quando fechamos o navegador, no padrão, você pode adicionar uma data para expiração como no exemplo abaixo:
+
+document.cookie = 'email=isabella@email.com; expires=Thu, 17 Dec 2020 12:00:00 UTC';
+
+
+Dá pra adicionar path ao cookie
+
+document.cookie = 'email=isabella@email.com; expires=Thu, 17 Dec 2020 12:00:00 UTC; path=/';
+
+
+Podemos atribuir o cookie a uma variavel: 
+
+const myCookie = document.cookie;
+console.log(myCookie) // email=isabella@email.com
+
+
+Para deletar o cookie, você não precisa especificar o valor que pretende deletar. Você pode deletá-lo passando uma data que já expirou:
+
+
+O HTML usa para armazenamentos de dados o localStorage, que armazena os dados sem data de expiração
+
+
+Exemplos com localStorage: 
+
+console.log(localStorage.length); // não possui nada salvo, então o retorno é o valor: 0
+localStorage.setItem('firstname', 'Adam'); // salva uma entrada com a key = 'firstname' e value = 'Adam'
+localStorage.setItem('lastname', 'Smith'); // salva uma entrada com a key = 'lastname' e value = 'Smith'
+console.log(localStorage.getItem('lastname')); // retorna o valor 'Smith'
+console.log(localStorage.length); // possui duas entradas, então o retorno é o valor: 2
+localStorage.removeItem('lastname'); // remove a entrada referente a key = 'lastname'
+console.log(localStorage.length); // possui uma entrada, então o retorno é o valor: 1
+localStorage.clear(); // limpa todas as entradas salvas em localStorage
+console.log(localStorage.length); // não possui nada salvo, então o retorno é o valor: 0
+
+
+
+O HTML usa para armazenamentos de dados o sessionStorage, que armazena os dados na sessão atual, assim que a aba é fechada os dados são perdidos.
+
+
+Exemplos com localStorage: 
+
+console.log(sessionStorage.length); // não possui nada salvo, então o retorno é o valor: 0
+sessionStorage.setItem('firstname', 'Adam'); // salva uma entrada com a key = 'firstname' e value = 'Adam'
+sessionStorage.setItem('lastname', 'Smith'); // salva uma entrada com a key = 'lastname' e value = 'Smith'
+console.log(sessionStorage.getItem('lastname')); // retorna o valor 'Smith'
+console.log(sessionStorage.length); // possui duas entradas, então o retorno é o valor: 2
+sessionStorage.removeItem('lastname'); // remove a entrada referente a key = 'lastname'
+console.log(sessionStorage.length); // possui uma entrada, então o retorno é o valor: 1
+sessionStorage.clear(); // limpa todas as entradas salvas em sessionStorage
+console.log(sessionStorage.length); // não possui nada salvo, então o retorno é o valor: 0
+
+
+**********************************************************Atenção************************************************************************
+
+Tanto o localStorage quanto o sessionStorage, armazenam dados no formato chave e valor e os valores salvos serão sempre no formato string.
+
+**********************************************************Atenção************************************************************************
+
+Para resolver isso podemos então usar uma atributo js que vai tranformar qualquer variavel em uma string, é o JSON.stringify();
+para fazer o processo reverso é só usar o JSON.parse();
+
+Ex: const myObj = {
+  name: 'Link',
+  age: 20,
+};
+
+// Precisamos transformar este objeto em uma string. Para isso, utilizamos a função `JSON.stringify()`.
+
+localStorage.setItem('myData', JSON.stringify(myObj));
+
+// Como dito anteriormente, o `localStorage` armazena dados no formato chave e valor, sendo os valores sempre string. Para isso, precisamos passar como primeiro parâmetro do método `setItem()` o nome da chave, passamos `myData` e como segundo parâmetro, a função `JSON.stringify()` com o objeto-valor que queremos armazenar na chave `myData`. Feito isso, teremos salvo no `localStorage` um objeto com a chave `myData` e o valor `{ "name": "Link", "age": 20 }`.
+
+// Agora, precisamos recuperar o objeto armazenado, mas queremos ele no formato original e não como uma string. Para isso, utilizaremos a função `JSON.parse()`.
+
+const recoveredObject = JSON.parse(localStorage.getItem('myData'));
+
+// Utilizamos a função `JSON.parse()` para transformar a string que está armazenada no `localStorage` de volta para seu formato original, um objeto.
+
+console.log(recoveredObject); // { name: 'Link', age: 20 }
