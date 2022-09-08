@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Formulário - TrybetTrip</title>
+    <meta charset="utf-8">
+    <link href = 'bootstrap-5.2.1-dist/css/bootstrap.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+<script src="dist/js/DatePickerX.min.js"></script>
+  </head>
+  <body>
+    <form action = '' method="GET" enctype="multipart/form-data"> 
+      <label for = "nome-completo" >Nome Completo:
+        <input class = 'form-group input-group' type="text" name = 'nome' id = 'nome-completo' placeholder="digite seu nome" required min="10" max="40">
+      </label>
+      <br>
+      <label for = "email" >Email:
+        <input class = 'form-group input-group' type="email" name = 'email' id = 'email' placeholder="digite seu melhor email" required min="10" max="50">
+      </label>
+        <p>Selecione o destino preferido:</p>
+        <label for = "opcao1" >
+          <input class = 'form-group input-group' type="radio" name = 'destino-escolhido' id = 'opcao1'> Cidade
+        </label>
+        <label for = "opcao2" >
+          <input class = 'form-group input-group' type="radio" name = 'destino-escolhido' id = 'opcao2'> Campo
+        </label>
+        <label for = "opcao3" >
+          <input class = 'form-group input-group' type="radio" name = 'destino-escolhido' id = 'opcao3'> Praia
+        </label>
+        <label for = "opcao4" >
+          <input class = 'form-group input-group' type="radio" name = 'destino-escolhido' id = 'opcao4'> Montanhas
+        </label>
+        <br>
+        <p>Porque você deveria ser selcionado, pequeno gafanhoto?</p>
+        <textarea class = 'form-control' maxlength="500" name = "porque-ele" id="porque-ele"></textarea>
+        <br>
+        <label for = "data" >
+          <p>Qual a melhor data para a sua viagem?</p>
+          <input class = 'form-group input-group' name = 'melhor-data' id = 'myImputId'> 
+        </label>
+        <br>
+        <label for = "chekbox-promocoes" >
+          <input class = 'form-group input-group' type="checkbox" name = 'promocoes' id = 'chekbox-promocoes'> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        </label>
+        <br>
+        <label for = "chekbox-permissao" >
+          <input class = 'form-group input-group' type="checkbox" name = 'permissao' id = 'chekbox-permissao'> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        </label>
+        <br>
+        <button type="submit" id = 'botao' disabled>Enviar</button>
+        <button type="reset" id = 'botaoReset'>Apagar tudo</button>
+
+
+
+
+
+
+
+
+
+    </form>
+    <script src = 'script.js'></script>
+  </body>
+</html>
