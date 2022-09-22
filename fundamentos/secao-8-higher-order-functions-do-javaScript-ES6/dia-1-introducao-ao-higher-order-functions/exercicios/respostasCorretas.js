@@ -22,9 +22,7 @@ const resultado = (gabarito, respostas, pontos) => {
 const check = (gabarito, respostas) => {
     let pontos = 0;
     for (let k in gabarito){
-        if (gabarito[k] === respostas[k]) {
-            pontos += 1;
-        } else { pontos -= 0.5;}
+        (gabarito[k] === respostas[k]) ? pontos += 1 : pontos -= 0.5;
     }
     resultado (gabarito, respostas, pontos);
 }
