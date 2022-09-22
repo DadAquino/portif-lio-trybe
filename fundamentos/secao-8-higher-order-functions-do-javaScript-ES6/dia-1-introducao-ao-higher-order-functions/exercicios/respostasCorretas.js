@@ -14,7 +14,7 @@
 
 const resultado = (gabarito, respostas, pontos) => {
     for (let k in gabarito) {
-        console.log(`Sua respota: ${respostas[k]}, Resposta correta: ${gabarito[k]}`);
+      (gabarito[k] === respostas[k]) ? console.log(`Sua respota: ${respostas[k]}, resposta correta!`) : console.log(`Sua respota: ${respostas[k]}, resposta errada!`)
     }
     console.log(`Pontuação final: ${pontos}`);
 }
@@ -28,6 +28,6 @@ const check = (gabarito, respostas) => {
 }
 
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+const STUDENT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'C', 'D', 'A', 'D', 'B'];
 
 check (RIGHT_ANSWERS, STUDENT_ANSWERS);
