@@ -17,10 +17,10 @@ arrayOfValues.forEach((element) => {
   console.log('Cada elemento do array:', element);
 });
 ```
-- arrayOfValues - Nome do array que será percorrido;
-- .forEach - A HOF pode ser .find, .some, .every;
-- element - Valor do elemento do array;
-- (element) => {console.log('Cada elemento do array:', element); - função a ser executada.
+- **arrayOfValues** - Nome do array que será percorrido;
+- **.forEach** - A HOF pode ser .find, .some, .every;
+- **element** - Valor do elemento do array;
+- **(element)** => {console.log('Cada elemento do array:', element); - função a ser executada.
 
 ### Outro detalhe interessante:
 
