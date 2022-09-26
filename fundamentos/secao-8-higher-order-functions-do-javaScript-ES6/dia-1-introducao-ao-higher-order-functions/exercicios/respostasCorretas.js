@@ -24,10 +24,10 @@ const check = (gabarito, respostas) => {
     for (let k in gabarito){
         (gabarito[k] === respostas[k]) ? pontos += 1 : pontos -= 0.5;
     }
-    resultado (gabarito, respostas, pontos);
+    return gabarito, respostas, pontos;
 }
 
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'C', 'D', 'A', 'D', 'B'];
 
-check (RIGHT_ANSWERS, STUDENT_ANSWERS);
+resultado (RIGHT_ANSWERS, STUDENT_ANSWERS);
