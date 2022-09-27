@@ -1,8 +1,8 @@
 # .filter e .map  
 
-### .filter
+## .filter
 
-###### retornará outro array com todos os elementos que satisfaçam à condição verificada pela função.
+**Retornará outro array com todos os elementos que satisfaçam à condição verificada pela função.**
 
 ``` javaScript
 const numbers = [19, 21, 30, 3, 45, 22, 15];
@@ -22,7 +22,7 @@ console.log(isEven2); // [ 30, 22 ]
 ***O retorno é um novo array com os dois números pares vindos do array numbers.***
 
 
-######Outra forma de se usar o filter é retornar um array sem o elemento desejado. É preciso remover o Ricardo do objeto agora, já que ele não é mais um estudante.
+**Outra forma de se usar o filter é retornar um array sem o elemento desejado. É preciso remover o Ricardo do objeto agora, já que ele não é mais um estudante.**
 
 ``` javaScript
 const arrayMyStudents = ['Maria', 'Manuela', 'Jorge', 'Ricardo', 'Wilson'];
@@ -34,15 +34,16 @@ const removeStudentByName = (name, listStudents) =>
 const newListStudents = removeStudentByName('Ricardo', arrayMyStudents);
 console.log(newListStudents); // [ 'Maria', 'Manuela', 'Jorge', 'Wilson' ]
 ```
-######Outra forma de se usar o filter é retornar um array sem o elemento desejado. É preciso remover o Ricardo do objeto agora, já que ele não é mais um estudante.
 
 ***
 
-### .map
+## .map
 
-###### O método map executa a função recebida por parâmetro para cada elemento de um array e retorna o resultado em um novo array, sem modificar o original.
+### O método map executa a função recebida por parâmetro para cada elemento de um array e retorna o resultado em um novo array, sem modificar o original.
+
 
 ***Obs: podemos usar um loop for para a maioria das aplicações .map, porém o .map deixa o código mais limpo, além de evitar erros, lembrando que o uso de cada uma das opções depende da aplicação.***
+
 
 **Exemplo de aplicação com o uso de for:**
 
