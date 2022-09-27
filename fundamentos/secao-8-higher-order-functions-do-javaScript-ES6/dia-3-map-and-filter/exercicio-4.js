@@ -61,21 +61,16 @@ const books = [
     },
   ];
 
-// Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author, com o nome da pessoa autora do livro, e uma propriedade age, com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha, considerando suas idades quando o livro foi lançado.
+  // Crie um array formado pelos livros com mais de 60 anos desde sua publicação. Esse array deve ser ordenado do livro mais velho ao mais novo.
 
-function nameAndAge() {
-    let obj = [];
-     obj = books.map((element) => {
-        return {
-            author: element.author.name,
-            age: element.releaseYear - element.author.birthYear,
-        }
-    });
-    return obj;
+  function oldBooksOrdered() {
+    // escreva seu código aqui
+    return  books.filter((element) => (2022 - element.releaseYear) > 59);
   }
+
   const ordenar = (array) => array.sort((a ,b) => {
-    return a.age - b.age;
+    return a.releaseYear - b.releaseYear;
   });
 
-  const result = ordenar(nameAndAge());
+  const result = ordenar(oldBooksOrdered());
   console.log(result);
