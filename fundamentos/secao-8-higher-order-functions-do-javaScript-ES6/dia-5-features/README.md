@@ -11,7 +11,7 @@ Hoje você vai aprender sete features do ES6 que são muito úteis na hora de de
 - default params.
 
 
-##Spread Operator
+## Spread Operator
 
 Spread Operator - espalha os elementos pelo array, sem alterar o array original.
 
@@ -67,7 +67,7 @@ Dessa forma, apenas **copiamos** as informações do **array original** e colamo
 
 
 
-##Parâmetro Rest
+## Parâmetro Rest
 
 O parâmetro rest é uma feature do ES6 que permite que você crie funções que recebam um **número variável de argumentos**. Os argumentos que serão passados como parâmetro são **salvos em um array que pode ser acessado de dentro da função**, o que te permite usar métodos como o **.length**. 
 
@@ -79,7 +79,7 @@ console.log(sum(4, 7, 8, 9, 60)); // 88
 sum calcula a soma de todos os argumentos passados a ela - independente do número. Como o parâmetro rest “empacota” todos os argumentos em um array, podemos utilizar o reduce para somar tudo o que estiver dentro desse array.
 
 
-##Object Destructuring
+## Object Destructuring
 
 ES6 introduz mais um recurso para tornar atividades corriqueiras, como acessar os valores de um objeto, mais simples e com menos declarações. Essa feature é o que chamamos de **desestruturação de objeto**, ou **object destructuring**
 
@@ -105,7 +105,7 @@ const { name, age, homeWorld: { name: planetName }, description: { jedi } } = ch
 console.log(`Esse é o ${name}, ele tem ${age} anos, mora no planeta ${planetName} e, por incrível que possa parecer, ele ${jedi ? 'é um Jedi' : 'não é um Jedi'}.`);
 ```
 
-##Array Destructuring
+## Array Destructuring
 
 Arrays são objetos iteráveis que têm algumas similaridades com os objetos em Javascript. Podemos desestruturar arrays usando a notação para array destructuring, que serve para acessar valores de um objeto e atribuí-los a variáveis.
 
@@ -136,7 +136,7 @@ console.log(thirdCountry); // China
 console.log(fourthCountry); // Canada
 ```
 
-##Default Destructuring
+## Default Destructuring
 
 Quando tentamos destructurar um valor do objeto ou array que não existe:
 
@@ -182,7 +182,7 @@ const newUser = (id, name, email) => {
 console.log(newUser(54, 'isabella', 'isabella@email.com')); // { id: 54, name: 'isabella', email: 'isabella@email.com' }
 ```
 
-##Default Parameters
+## Default Parameters
 
 ``` javaScript
 const greeting = (user = 'pessoa usuária') => console.log(`Welcome ${user}!`);
