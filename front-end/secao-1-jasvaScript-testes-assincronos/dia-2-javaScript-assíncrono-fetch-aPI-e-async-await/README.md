@@ -1,10 +1,10 @@
-#JavaScript Assíncrono - Fetch API e async/await
+# JavaScript Assíncrono - Fetch API e async/await
 
 A comunicação com serviços de terceiros é parte do dia a dia de qualquer pessoa que programa. Seja para coletar tweets, seja para abrir um mapa do Google Maps, seja até mesmo se comunicar com um banco de dados ou serviço interno da organização, **APIs são sempre** a forma de se fazer isso. Entender o que são e como usá-las, isto é, **como fazer sua aplicação se comunicar com elas**, é absolutamente **fundamental**.
 
 ***Em resumo a API é responsável pelo controle dos pontos de acesso a eles, por meio de um conjunto de rotinas e padrões de programação.***
 
-###O que é JSON e por que o usamos?
+### O que é JSON e por que o usamos?
 
 JSON significa **JavaScript Object Notation** e é basicamente uma forma de representarmos dados como objetos Javascript:
 
@@ -22,7 +22,7 @@ JSON significa **JavaScript Object Notation** e é basicamente uma forma de repr
 
 Apesar do nome, ele **não é um objeto JavaScript**, apenas é estruturado de forma que faz uso de chaves e valores. Então, por não ser um objeto nativo do JavaScript, precisamos traduzi-lo para que fique a par da linguagem que estamos usando. Para isso existe a **função JSON.parse()**, assim como existe a função **JSON.stringify()**, que transforma uma estrutura **JavaScript em string**.
 
-###Como utilizar APIs na minha aplicação?
+### Como utilizar APIs na minha aplicação?
 
 Para utilizá-las siga as boas práticas a seguir:
 
@@ -33,7 +33,7 @@ Para utilizá-las siga as boas práticas a seguir:
 
 ***
 
-###Promises
+### Promises
 
 - As **Promises são assíncronas**, ou seja, elas têm um espaço especial para sua execução sem que travem o fluxo de outras funções;
 
@@ -57,7 +57,7 @@ Esses métodos vão garantir que o código que estamos desenvolvendo aguarde o r
 
 ***
 
-###Fetch API
+### Fetch API
 
 No contexto do Front-end, a maioria dos casos em que você precisa utilizar funções assíncronas ocorrem em requisições.
 Um bom exemplo é a função **fetch() da Fetch API!**
@@ -73,3 +73,66 @@ O retorno da chamada varia conforme a API utilizada, não só em conteúdo, mas 
 A função fetch é responsável por enviar requisições a APIs. Porém essa não é sua única responsabilidade. Ela também possui ferramentas para tratar os dados recebidos e devolvê-los, além de lidar com os erros.
 
 ***
+### Async e Await
+
+A funcionalidade **async** sozinha não resolve nosso problema com a função fetchJoke. Assim, junto com ela vem um bônus, o **await**.
+O await só pode ser usado dentro de uma função com async, e ela faz exatamente o que diz: **faz a função esperar uma resposta para continuar sua execução.**
+
+***Lembre-se: O await só pode ser usado dentro de uma função com async.***
+
+
+**Temos duas maneiras de utilizar o async await. A primeira é mesclando com o .then() e o .catch():**
+
+```javaScript
+const fetch = require('node-fetch');
+
+const fetchJoke = async () => {
+  const url = 'https://api.chucknorris.io/jokes/random?category=dev';
+
+  const result = await fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.value)
+    .catch((error) => `Algo deu errado :( \n${error}`);
+  
+  console.log(result);
+};
+
+fetchJoke();
+
+// Chuck Norris can write multi-threaded applications with a single thread.
+```
+
+Usando o await , a fetchJoke espera o fetch terminar toda a sua execução (até o último .then() ou .catch()) para só depois executar o console.log().
+
+
+
+**A segunda é refatorando o .then() e o .catch() usando o try e o catch:**
+
+```javaScript
+const fetch = require('node-fetch');
+
+const fetchJoke = async () => {
+  const url = 'https://api.chucknorris.io/jokes/random?category=dev';
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.value);
+  } catch(error) {
+    console.log(`Algo deu errado :( \n${error}`);
+  }
+}
+
+fetchJoke();
+
+// Chuck Norris can write multi-threaded applications with a single thread.
+```
+
+### Para fixar
+
+
+- O que é um código assíncrono? Qual é a diferença desse código comparado a outro que é executado de modo síncrono?
+- Qual problema surge quando se tem que enfileirar várias callbacks?
+- Por que deve-se usar as Promises em códigos assíncronos?
+- Ao se comunicar com uma API, a comunicação deve ser síncrona ou assíncrona? Lembre-se de que o serviço ao qual você está se - -  Conectando pode ou demorar muito para dar retorno ou ser rápido. Além disso, poderá estar fora do ar etc.
+- Ainda sobre comunicação com uma API, o que é fetch e para que ele serve?
